@@ -1,0 +1,90 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:transmogrifier="http://namespaces.plone.org/transmogrifier"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="joomla2plone.migration">
+
+  <!-- Load all the zcml slugs from the packages named in
+       ``install_requires``. We avoid having to load transmogrifier
+       manually by doing this.
+
+       If you aren't z3c.autoinclude enabled, then add the
+       following to your configure.zcml:
+
+       <include package="collective.transmogrifier" />
+       <include package="collective.transmogrifier" file="meta.zcml" />
+  -->
+  <includeDependencies package="." />
+  <include package=".blueprints" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="joomla2plone.migration"
+      directory="profiles/default"
+      description="Installs the joomla2plone.migration package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- Transmogrifier configurations -->
+
+  <transmogrifier:registerConfig
+      name="joomla2plone.migration.base"
+      title="My migration base config"
+      description="Base settings for all transmogrifier imports"
+      configuration="config/base.cfg"
+      />
+
+  <transmogrifier:registerConfig
+      name="joomla2plone.migration.articles"
+      title="Joomla! articles"
+      description="Import articles from Joomla! into Plone"
+      configuration="config/articles.cfg"
+      />
+
+      <!--
+  <transmogrifier:registerConfig
+      name="joomla2plone.migration.newsitem2nitf"
+      title="News Item to nitf sections"
+      description="Convert Plone content type from News Item to nitf into Plone"
+      configuration="config/newsitem2nitf.cfg"
+      />
+      -->
+
+  <transmogrifier:registerConfig
+      name="joomla2plone.migration.sections"
+      title="Joomla! sections"
+      description="Import sections from Joomla! into Plone"
+      configuration="config/sections.cfg"
+      />
+
+  <transmogrifier:registerConfig
+      name="joomla2plone.migration.links"
+      title="Joomla! links"
+      description="Import links from Joomla! into Plone"
+      configuration="config/links.cfg"
+      />
+<!--
+  <transmogrifier:registerConfig
+      name="joomla2plone.migration.images"
+      title="Joomla! images"
+      description="Import images from Joomla! into Plone"
+      configuration="config/images.cfg"
+      />
+-->
+
+  <utility
+      component="joomla2plone.migration.blueprints.topiccriterionadder.TopicCriterionAdder"
+      name="joomla2plone.migration.blueprints.topiccriterionadder"
+      />
+      <!--
+  <utility
+     component="joomla2plone.migration.blueprints.topiccriterionadder.PrettyPrinter"
+     name="joomla2plone.migration.blueprints.pprinter"
+     />
+      -->
+  <utility
+     component="joomla2plone.migration.blueprints.prettyprinter.PrettyPrinter"
+     name="joomla2plone.migration.blueprints.pprinter"
+     />
+
+</configure>

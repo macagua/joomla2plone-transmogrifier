@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="collective.transmogrifier">
+
+  <!-- common utilities -->
+
+  <utility
+      component="joomla2plone.migration.blueprints.topiccriterionadder.TopicCriterionAdder"
+      name="joomla2plone.migration.blueprints.topiccriterionadder"
+      />
+      <!--
+  <utility
+     component="joomla2plone.migration.blueprints.topiccriterionadder.PrettyPrinter"
+     name="joomla2plone.migration.blueprints.pprinter"
+     />
+      -->
+  <utility
+     component="joomla2plone.migration.blueprints.prettyprinter.PrettyPrinter"
+     name="joomla2plone.migration.blueprints.pprinter"
+     />
+
+</configure>

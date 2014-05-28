@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<metadata>
+  <version>1000</version>
+  <dependencies>
+    <dependency>profile-joomla2plone.policy:default</dependency>
+    <dependency>profile-joomla2plone.migration:default</dependency>
+    <!--
+    <dependency>profile-transmogrify.joomla2nitf:default</dependency>
+    -->
+  </dependencies>
+</metadata>

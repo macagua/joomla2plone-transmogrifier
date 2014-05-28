@@ -1,0 +1,6 @@
+joomla2plone.migration.articles
+joomla2plone.migration.sections
+joomla2plone.migration.links
+#joomla2plone.migration.images
+#joomla2plone.migration.newsitem2nitf
+#joomla2plone.migration.polls
