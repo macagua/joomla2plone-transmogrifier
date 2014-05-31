@@ -4,7 +4,7 @@ joomla2plone-transmogrifier
 Let you migrate data from Joomla! to Plone using Transmogrifier.
 
 This is the buildout is ispiraded from the Plone Symposium East 2011
-claytron talk, `Migrating From Drupal to Plone with Transmogrifier`_.
+`Clayton Parker`_ talk, `Migrating From Drupal to Plone with Transmogrifier`_.
 You can see the `video here`_.
 
 The main gol is migrate data from Joomla! to Plone using Transmogrifier
@@ -30,14 +30,14 @@ Install instructions
 Joomla! Install
 ...............
 
-First you should create a Joomla! site. The demo was created using Joomla! 1.5.23,
-but should work fine with any Joomla! 1.5.x install. The queries are all written
-in MySQL, so you'll need to set up Joomla! using MySQL. See the Joomla! docs for
-more details.
+First you should create a Joomla! site. The demo was created using
+Joomla! 1.5.23, but should work fine with any Joomla! 1.5.x install.
+The queries are all written in MySQL, so you'll need to set up Joomla!
+using MySQL. See the Joomla! docs for more details.
 
-In `joomla2plone.migration.config.base`, you can change the `dsn` to match your
-settings. The default is to connect with the `root` user with no
-password set. The default database name is `joomla-transmog`. ::
+In `joomla2plone.migration.config.base`, you can change the `dsn` to
+match your settings. The default is to connect with the `root` user
+with no password set. The default database name is `joomla-transmog`. ::
 
     [joomla]
     blueprint = transmogrify.sqlalchemy
@@ -96,15 +96,39 @@ the content. ::
     username: admin
     password: admin
 
-Issues
-------
+Support
+========
 
-If you run into any issues trying to get this to work, add an issue to
-the tracker here on this github project
+If you run into any issues trying to get this to work, please, add an
+issue to the `tracker here`_ on this github project.
+
+Collaborations
+==============
+
+Really thanks to :
+
+Original concept
+----------------
+
+* Clayton Parker aka claytron
+
+Original Author
+----------------
+
+* Leonardo J .Caballero G. aka macagua
+
+Impressive collaborations
+-------------------------
+
+* Full name aka username
+
+For an updated list of all contributors visit the following URL: https://github.com/macagua/joomla2plone-transmogrifier/contributors
 
 .. _Migrating From Drupal to Plone with Transmogrifier: http://weblion.psu.edu/symposium/talks/migrating-from-drupal-to-plone-with-transmogrifier
 .. _video here: https://streaming.psu.edu/media/?movieId=13401
+.. _Clayton Parker: https://github.com/claytron
 .. _transmogrify.sqlalchemy: http://pypi.python.org/pypi/transmogrify.sqlalchemy
 .. _collective.recipe.plonesite: http://pypi.python.org/pypi/collective.recipe.plonesite
 .. _install: http://docs.joomla.org/J3.x:Installing_Joomla!
 .. _configure: http://docs.joomla.org/J3.x:Global_configuration!
+.. _tracker here: https://github.com/macagua/joomla2plone-transmogrifier/issues
